@@ -1,0 +1,27 @@
+<h2>Products</h2>
+
+
+
+
+
+<div class="row">
+  <div *ngFor="let product of products ; index as productId">
+    <div class="col-6">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{product.img}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">   <a [routerLink]="['/products', productId]">
+          {{ product.name }}
+        </a></h5>
+        <p class="card-text" *ngIf="product.description"> 
+          {{ product.description }}</p>
+        <p class="card-text" *ngIf="product.startDate"> 
+            Start Date: {{ product.startDate }}</p>
+        <p class="card-text" *ngIf="product.duration"> 
+            Duration: {{ product.duration }} days</p>
+        <a href="#" class="btn btn-primary" [routerLink]="['/products', productId]">Book Travel</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

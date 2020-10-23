@@ -1,0 +1,62 @@
+    
+ <div class="container">   
+    <h3>Cart</h3>
+
+    <div class="cart-item" *ngFor="let item of items">
+        <div class="row">
+            <div class="col-3">
+                <span>{{ item.name }} </span>
+            </div>    
+            <div class="col-2">    
+                <span ><p class= "text-right"> {{ item.price | currency }}</p></span>
+            </div>    
+            <div class="col-3">   
+                <span>  Date: {{item.startDate}}</span>
+            </div>
+        </div>
+    </div>
+    
+        <div class="row">
+            <div class="col-3">
+                <span>Total Cost:</span>
+            </div>
+            <div class="col-2">
+                <span style="text-decoration: underline;"><p class= "text-right">{{sum | currency }}</p></span>
+            </div>
+
+        </div>
+
+        <h5>Discount of 10 % if total sum is above 200,- and of 20% if above 500,-</h5>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+    <div class ="form">
+        <div class="row">
+            <div class="col-2">
+                <label for="name">
+                    Name
+                </label>
+            </div>
+            <div class="col-5">   
+                <input id="name" type="text" formControlName="name" class= "input">
+            </div>
+    </div>
+
+    </div>
+
+    <div class ="form">
+        <div class="row">
+            <div class="col-2">
+    <label for="address">
+        Address
+    </label>
+    </div>
+    <div class="col-5">
+    <input id="address" type="text" formControlName="address">
+    </div>
+    </div>
+    
+    <button class="button" type="submit">Purchase</button>
+    </div>
+    </form>
+
+</div>

@@ -1,0 +1,55 @@
+<h1 class = "text-center">Our Offers</h1>
+
+<h3>Travel Offers</h3>
+<div class="row">
+    <div *ngFor="let product of products ; index as productId">
+      <div class="col-6">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{product.img}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">   <a [routerLink]="['/products', productId]">
+            {{ product.name }}
+          </a></h5>
+          <p class="card-text" *ngIf="product.description"> 
+            {{ product.description }}</p>
+          <p class="card-text" *ngIf="product.startDate"> 
+              Start Date: {{ product.startDate }}</p>
+          <p class="card-text" *ngIf="product.duration"> 
+              Duration: {{ product.duration }} days</p>
+          <a href="#" class="btn btn-primary" [routerLink]="['/products', productId]">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<h3>Blogs</h3>
+  <div class="row">
+    <div class="col-6">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="../assets/oida.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">   <a href="/blog">
+            Blogs, are they useful?
+          </a></h5>
+          <p class="card-text">
+            Das oder auch der Blog /blɔg/ oder auch Weblog /ˈwɛb.lɔg/ (Wortkreuzung aus englisch Web und Log für Logbuch oder Tagebuch) ist ein meist auf einer Website geführtes und damit meist öffentlich einsehbares Tagebuch oder Journal.</p>
+          <a href="/blog" class="btn btn-primary">Read more</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="../assets/boy.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">   <a href="/blog">
+                'Travel and Read blogs, the newest Trend!!'
+              </a></h5>
+              <p class="card-text">
+                Charakteristische Merkmale dieser Kommunikationsform sind die Individualisierung der Kommunikation, die Reflexivität hinsichtlich der Medienkommunikation, die Verlinkung und Vernetzung der Webkommunikation.</p>
+              <a href="/blog" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+  </div>
+  
+

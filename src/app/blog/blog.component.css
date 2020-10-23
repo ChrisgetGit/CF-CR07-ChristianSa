@@ -1,0 +1,43 @@
+
+.back {
+    background-image: url('/assets/bg1.jpg');
+    
+    }
+
+.transparent{
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
+}
+
+.back{
+    
+    padding: 1vh;
+    padding-top: 2vh;
+}
+
+.transparent{
+    padding: 1vh
+}
+
+#text{
+    text-align: justify;
+}
+a{
+    color:gray;
+}
+
+#small-link{
+    font-size: 1vh;
+}
+
+
+a p{
+    font-size:1vh !important
+}
+
+.autorpic{
+    height:13vh;
+    width: 13vh
+    
+}
